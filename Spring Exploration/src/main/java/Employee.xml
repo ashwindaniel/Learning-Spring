@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:content="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="emp3954" class="com.aspiresys.ashwindaniel.Employee"
+		init-method="onInit" destroy-method="onDest">
+		<property name="eid" value="3954" />
+		<property name="ename" value="Ashwin Daniel" />
+		<constructor-arg ref="addr3954" />
+	</bean>
+	<bean id="emp3979" class="com.aspiresys.ashwindaniel.Employee"
+		init-method="onInit" destroy-method="onDest">
+		<property name="eid" value="3979" />
+		<property name="ename" value="MahaLavanya Sriram" />
+		<property name="address" ref="addr3979"></property>
+	</bean>
+	<bean id="addr3954" class="com.aspiresys.ashwindaniel.Address">
+		<property name="apartment" value="Radiance Shine" />
+		<property name="street" value="OMR" />
+		<property name="city" value="Chennai" />
+		<property name="state" value="Tamil Nadu" />
+		<property name="pin" value="603103" />
+	</bean>
+	<bean id="addr3979" class="com.aspiresys.ashwindaniel.Address">
+		<property name="apartment" value="Some Building" />
+		<property name="street" value="T nagar" />
+		<property name="city" value="Chennai" />
+		<property name="state" value="Tamil Nadu" />
+		<property name="pin" value="600090" />
+	</bean>
+</beans>
