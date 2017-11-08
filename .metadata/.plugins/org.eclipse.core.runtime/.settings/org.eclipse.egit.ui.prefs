@@ -1,2 +1,0 @@
-commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>Spring Demo of creating Beans&\#x0A;&\#x0A;Beans created by using Spring containers&\#x0A;1 BeanFactory&\#x0A;2 ApplicationContext&\#x0A;Also explored Dependency Injection using&\#x0A;1 constructor injection&\#x0A;2 property injection</message>\r\n</messages>
-eclipse.preferences.version=1
