@@ -1,0 +1,11 @@
+
+squid:CallToDeprecatedMethod("6Remove this use of "XmlBeanFactory"; it is deprecated.(©éß üÿÿÿÿ8–à–Ýù+H*RMINORZ
+CODE_SMELL
+ƒsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¥ˆ‚¸ùÿÿÿÿ8–à–Ýù+H+RMAJORZ
+CODE_SMELL
+k
+squid:S106/"9Replace this use of System.out or System.err by a logger.(È¼¿§8–à–Ýù+H,RMAJORZ
+CODE_SMELL
+p
+squid:S106."9Replace this use of System.out or System.err by a logger.(¢”°öÿÿÿÿÿ8–à–Ýù+H-RMAJORZ
+CODE_SMELL
