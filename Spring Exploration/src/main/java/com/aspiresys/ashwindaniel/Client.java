@@ -26,7 +26,7 @@ public class Client {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// Traditional Methods
+		// Traditional Method
 		// Employee eRef1 = new Employee();
 		// eRef1.setEid(3954);
 		// eRef1.setEname("Ashwin Daniel");
