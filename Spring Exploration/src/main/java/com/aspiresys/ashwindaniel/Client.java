@@ -27,10 +27,9 @@ public class Client {
 	 */
 	public static void main(String[] args) {
 		// Traditional Method
-		// Employee eRef1 = new Employee();
-		// eRef1.setEid(3954);
-		// eRef1.setEname("Ashwin Daniel");
-		// System.out.println(eRef1);
+		 Employee eRef1 = new Employee();
+		 eRef1.setEid(3954);
+		 eRef1.setEname("Ashwin Daniel");
 
 		// Spring Method | Inversion of Control
 		Resource resource = new ClassPathResource("Employee.xml");
@@ -41,10 +40,11 @@ public class Client {
 		// Spring Container - This will create all objects regardless of request
 		ApplicationContext context = new ClassPathXmlApplicationContext("Employee.xml");
 
-		Employee eRef1 = (Employee) factory.getBean("emp3979");
-		Employee eRef2 = (Employee) context.getBean("emp3954");
+		Employee eRef2 = (Employee) factory.getBean("emp3979");
+		Employee eRef3 = (Employee) context.getBean("emp3954");
 		System.out.println(eRef1);
 		System.out.println(eRef2);
+		System.out.println(eRef3);
 		ClassPathXmlApplicationContext cxt = (ClassPathXmlApplicationContext) context;
 		// shutdown contect
 		cxt.close();

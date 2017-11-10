@@ -24,8 +24,5 @@ hs_err_pid*
 # eclipse files #
 .metadata
 .sonarlint
-.project
-Spring Exploration/.classpath
-Spring Exploration/.settings/org.eclipse.jdt.core.prefs
-Spring Exploration/target/classes/META-INF/MANIFEST.MF
-*.properties
+Spring Exploration/pom.xml
+*.prefs
