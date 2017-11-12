@@ -14,6 +14,7 @@ import org.springframework.core.io.Resource;
  * @author ashwin.daniel
  *
  */
+@SuppressWarnings("deprecation")
 public class Client {
 
 	/**
