@@ -3,7 +3,6 @@
  */
 package com.aspiresys.ashwindaniel;
 
-import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
@@ -11,6 +10,8 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author ashwin.daniel
@@ -28,13 +29,16 @@ public class Client {
 	/**
 	 * @param args
 	 */
+	
+	private final static Logger log = LoggerFactory.getLogger(Client.class);
+			
 	public static void main(String[] args) {
 		work1();
 		// work2();
 	}
 
 	private static void work1() {
-		System.out.println("Inside Client Class work1() -- Starting Bean");
+		log.debug("Inside Client Class work1() -- Starting Bean");
 		// Spring Container - This will create all objects regardless of request
 		// Using Application Context
 		ApplicationContext context = new ClassPathXmlApplicationContext("Bean.xml");
@@ -42,7 +46,7 @@ public class Client {
 		// getBean
 		Employee ref = (Employee) context.getBean("emp3954");
 
-		System.out.println(ref);
+		log.debug("",ref);
 		((AbstractApplicationContext) context).registerShutdownHook();
 		ClassPathXmlApplicationContext cxt = (ClassPathXmlApplicationContext) context;
 		// shutdown context
@@ -68,9 +72,9 @@ public class Client {
 		// getBean
 		Employee eRef2 = (Employee) factory.getBean("emp3979");
 		Employee eRef3 = (Employee) context.getBean("emp3954");
-		System.out.println(eRef1);
-		System.out.println(eRef2);
-		System.out.println(eRef3);
+		log.debug("",eRef1);
+		log.debug("",eRef2);
+		log.debug("",eRef3);
 		((AbstractApplicationContext) context).registerShutdownHook();
 		ClassPathXmlApplicationContext cxt = (ClassPathXmlApplicationContext) context;
 		// shutdown context
