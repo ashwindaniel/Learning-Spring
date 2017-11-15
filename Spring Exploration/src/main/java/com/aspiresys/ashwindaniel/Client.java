@@ -29,12 +29,12 @@ public class Client {
 	/**
 	 * @param args
 	 */
-	
+
 	private final static Logger log = LoggerFactory.getLogger(Client.class);
-			
+
 	public static void main(String[] args) {
-		work1();
-		// work2();
+		// work1();
+		work2();
 	}
 
 	private static void work1() {
@@ -46,7 +46,7 @@ public class Client {
 		// getBean
 		Employee ref = (Employee) context.getBean("emp3954");
 
-		log.debug("",ref);
+		log.debug("" + ref);
 		((AbstractApplicationContext) context).registerShutdownHook();
 		ClassPathXmlApplicationContext cxt = (ClassPathXmlApplicationContext) context;
 		// shutdown context
@@ -72,9 +72,9 @@ public class Client {
 		// getBean
 		Employee eRef2 = (Employee) factory.getBean("emp3979");
 		Employee eRef3 = (Employee) context.getBean("emp3954");
-		log.debug("",eRef1);
-		log.debug("",eRef2);
-		log.debug("",eRef3);
+		log.debug("" + eRef1);
+		log.debug("" + eRef2);
+		log.debug("" + eRef3);
 		((AbstractApplicationContext) context).registerShutdownHook();
 		ClassPathXmlApplicationContext cxt = (ClassPathXmlApplicationContext) context;
 		// shutdown context

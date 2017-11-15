@@ -3,6 +3,8 @@
  */
 package com.aspiresys.ashwindaniel;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
@@ -11,7 +13,7 @@ import org.springframework.beans.factory.InitializingBean;
  *
  */
 public class Employee implements InitializingBean, DisposableBean {
-
+	private final static Logger log = LoggerFactory.getLogger(Client.class);
 	/**
 	 * 
 	 */
@@ -20,7 +22,7 @@ public class Employee implements InitializingBean, DisposableBean {
 	private Address address;
 
 	public Employee() {
-		System.out.println("Inside Employee Constructor");
+		log.debug("Inside Employee Constructor");
 	}
 
 	public Employee(int eid, String ename) {
@@ -95,19 +97,19 @@ public class Employee implements InitializingBean, DisposableBean {
 
 	@SuppressWarnings("unused")
 	private void onInit() {
-		System.out.println("inside onInit() method created");
+		log.debug("inside onInit() method created");
 	}
 
 	@SuppressWarnings("unused")
 	private void onDest() {
-		System.out.println("inside onDest() method created");
+		log.debug("inside onDest() method created");
 	}
 
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("Inside afterPropertySet");
+		log.debug("Inside afterPropertySet");
 	}
 
 	public void destroy() throws Exception {
-		System.out.println("Inside destroy");
+		log.debug("Inside destroy");
 	}
 }
